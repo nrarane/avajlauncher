@@ -21,5 +21,4 @@ public class WeatherProvider {
         return null;
     }
 
-
 }
