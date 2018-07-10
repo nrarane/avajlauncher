@@ -1,8 +1,8 @@
-package vehicle;
+package ro.academy.avaj.simulator.vehicle;
 
-import Towers.WeatherTower;
+import ro.academy.avaj.simulator.WeatherTower;
 
-public class Jetplane extends Aircraft{
+public class Jetplane extends Aircraft {
 
     private WeatherTower weatherTower;
 

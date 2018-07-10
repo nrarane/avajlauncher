@@ -1,4 +1,4 @@
-package vehicle;
+package ro.academy.avaj.simulator.vehicle;
 
 public class Coordinates {
 
@@ -10,15 +10,16 @@ public class Coordinates {
         //some code in here to get coordinates
     }
 
-    public static int getLongitude() {
+    public int getLongitude() {
         return longitude;
     }
 
-    public static int getLatitude() {
+    public int getLatitude() {
         return latitude;
     }
 
-    public static int getHeight() {
+    public int getHeight() {
         return height;
     }
+
 }

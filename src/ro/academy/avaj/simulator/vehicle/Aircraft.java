@@ -1,4 +1,7 @@
-package vehicle;
+package ro.academy.avaj.simulator.vehicle;
+
+import ro.academy.avaj.simulator.vehicle.Coordinates;
+import ro.academy.avaj.simulator.vehicle.Flyable;
 
 public class Aircraft implements Flyable {
 

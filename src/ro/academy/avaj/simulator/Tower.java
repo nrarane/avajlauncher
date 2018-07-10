@@ -1,8 +1,6 @@
-package Towers;
+package ro.academy.avaj.simulator;
 
-//import vehicle.AircraftFactory.Flyable;
-
-import vehicle.Flyable;
+import ro.academy.avaj.simulator.vehicle.Flyable;
 
 public class Tower {
 

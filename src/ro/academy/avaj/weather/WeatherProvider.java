@@ -1,4 +1,6 @@
-import vehicle.Coordinates;
+package ro.academy.avaj.weather;
+
+import ro.academy.avaj.simulator.vehicle.Coordinates;
 
 public class WeatherProvider {
 
