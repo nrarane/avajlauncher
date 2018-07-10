@@ -21,9 +21,26 @@ public class Baloon extends Aircraft{
         ◦ FOG - Height decreases with 3
         ◦ SNOW - Height decreases with 15
         * */
+        Coordinates coordinates = new Coordinates();
+
+        int lat = Coordinates.getLatitude();
+        int lon = Coordinates.getLongitude();
+        int height = Coordinates.getHeight();
+
+        if ( WeatherTower.getWeather(coordinates) == "SUN") {
+            lon = lon -  2;
+            height = height + 4;
+        } else if ( WeatherTower.getWeather(coordinates) == "RAIN" ) {
+            height = height - 5;
+        } else if ( WeatherTower.getWeather(coordinates) == "FOG" ) {
+            height = height - 3;
+        } else if ( WeatherTower.getWeather(coordinates) == "SNOW" ) {
+            height = height - 15;
+        }
     }
 
     public static void registerTower(WeatherTower weatherTower) {
 
     }
+
 }

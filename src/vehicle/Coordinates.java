@@ -10,15 +10,15 @@ public class Coordinates {
         //some code in here to get coordinates
     }
 
-    public int getLongitude() {
+    public static int getLongitude() {
         return longitude;
     }
 
-    public int getLatitude() {
+    public static int getLatitude() {
         return latitude;
     }
 
-    public int getHeight() {
+    public static int getHeight() {
         return height;
     }
 }
