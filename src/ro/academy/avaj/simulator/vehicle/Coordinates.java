@@ -6,8 +6,11 @@ public class Coordinates {
     private int latitude;
     private int height;
 
-    public void Coordinates(int longitude, int latitude, int height) {
+    public Coordinates(int longitude, int latitude, int height) {
         //some code in here to get coordinates
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.height = height;
     }
 
     public int getLongitude() {
