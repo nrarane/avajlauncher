@@ -5,9 +5,14 @@ import za.co.wethinkcode.avaj.weather.WeatherProvider;
 
 public class WeatherTower extends Tower {
 
+    private WeatherProvider weatherprovider = WeatherProvider.getProvider();
+
     public String getWeather(Coordinates coordinates) {
-        return WeatherProvider.getProvider().getCurrentWeather(coordinates);
+        return weatherprovider.getCurrentWeather(coordinates);
     }
 
-    void changeWeather() {}
+    void changeWeather() {
+        conditionsChanged();
+    }
+
 }

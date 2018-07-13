@@ -6,7 +6,7 @@ public class Baloon extends Aircraft implements Flyable {
 
     private WeatherTower weatherTower;
 
-    protected Baloon(String name, Coordinates coordinates) {
+    Baloon(String name, Coordinates coordinates) {
         super(name, coordinates);
     }
 
@@ -28,15 +28,15 @@ public class Baloon extends Aircraft implements Flyable {
                 super.coordinates.setLatitude(super.coordinates.getLongitude() + 4);
                 break;
             case "SNOW":
-                weatherMessage += "It's freezing balls out here";
+                weatherMessage += " It's freezing balls out here";
                 super.coordinates.setHeight(super.coordinates.getHeight() - 15);
                 break;
             case "FOG":
-                weatherMessage += "I can't see anything";
+                weatherMessage += " I can't see anything";
                 super.coordinates.setLatitude(super.coordinates.getHeight() - 3);
                 break;
             case "RAIN":
-                weatherMessage += "The wind is slippery as hell due to this rain";
+                weatherMessage += " The wind is slippery as hell due to this rain";
                 super.coordinates.setHeight(super.coordinates.getHeight() - 5);
                 break;
             default:
@@ -53,6 +53,7 @@ public class Baloon extends Aircraft implements Flyable {
 
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
+        weatherTower.register(this);
     }
 
 }

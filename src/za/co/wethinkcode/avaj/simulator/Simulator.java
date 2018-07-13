@@ -20,6 +20,7 @@ public class Simulator {
             BufferedReader reader = new BufferedReader(new FileReader(args[0]));
             String line = reader.readLine();
             if (line != null) {
+
                 weatherTower = new WeatherTower();
                 int simulations = Integer.parseInt(line.split(" ")[0]);
                 if (simulations < 0) {

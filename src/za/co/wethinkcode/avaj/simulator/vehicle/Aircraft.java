@@ -18,4 +18,20 @@ public class Aircraft {
         return ++idCounter;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+
+    public static long getIdCounter() {
+        return idCounter;
+    }
+
 }

@@ -10,7 +10,7 @@ public class Helicopter extends Aircraft implements Flyable {
         return weatherTower;
     }
 
-    protected Helicopter(String name, Coordinates coordinates) {
+    Helicopter(String name, Coordinates coordinates) {
         super(name, coordinates);
     }
 
@@ -32,15 +32,15 @@ public class Helicopter extends Aircraft implements Flyable {
                 super.coordinates.setLatitude(super.coordinates.getLatitude() + 10);
                 break;
             case "SNOW":
-                weatherMessage += "It's freezing balls out here";
+                weatherMessage += " It's freezing balls out here";
                 super.coordinates.setHeight(super.coordinates.getHeight() - 12);
                 break;
             case "FOG":
-                weatherMessage += "I can't see anything";
+                weatherMessage += " I can't see anything";
                 super.coordinates.setLatitude(super.coordinates.getLatitude() + 1);
                 break;
             case "RAIN":
-                weatherMessage += "The wind is slippery as hell due to this rain";
+                weatherMessage += " The wind is slippery as hell due to this rain";
                 super.coordinates.setHeight(super.coordinates.getLatitude() + 5);
                 break;
             default:
@@ -57,5 +57,6 @@ public class Helicopter extends Aircraft implements Flyable {
 
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
+        weatherTower.register(this);
     }
 }
