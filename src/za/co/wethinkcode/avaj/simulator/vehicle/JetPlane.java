@@ -12,7 +12,6 @@ public class JetPlane extends Aircraft implements Flyable {
 
     public void updateConditions() {
 
-
         /*
          * SUN - Latitude increases with 10, Height increases with 2
          * RAIN - Latitude increases with 5
