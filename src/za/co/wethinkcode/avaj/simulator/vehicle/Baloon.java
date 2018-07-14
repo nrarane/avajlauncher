@@ -12,11 +12,11 @@ public class Baloon extends Aircraft implements Flyable {
 
     public void updateConditions() {
         /*
-        ◦ SUN - Longitude increases with 2, Height increases with 4
-        ◦ RAIN - Height decreases with 5
-        ◦ FOG - Height decreases with 3
-        ◦ SNOW - Height decreases with 15
-        * */
+         * SUN - Longitude increases with 2, Height increases with 4
+         * RAIN - Height decreases with 5
+         * FOG - Height decreases with 3
+         * SNOW - Height decreases with 15
+         * */
         String message = "Baloon#"+name+"("+id+"):";
         String weatherMessage = "";
 

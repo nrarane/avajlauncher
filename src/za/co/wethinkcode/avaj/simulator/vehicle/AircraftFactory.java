@@ -1,7 +1,5 @@
 package za.co.wethinkcode.avaj.simulator.vehicle;
 
-import java.util.InvalidPropertiesFormatException;
-
 public class AircraftFactory {
 
     public static Flyable newAircraft(String type, String name, int longitude, int latitude, int height ) throws Exception {
@@ -14,10 +12,10 @@ public class AircraftFactory {
         if (type.equals("Baloon")) {
             return (new Baloon(name, coordinates));
         }
-        if (type.equals("Jetplane")) {
-            return (new Jetplane(name, coordinates));
+        if (type.equals("JetPlane")) {
+            return (new JetPlane(name, coordinates));
         }
-        throw new InvalidFlyableType();
+        throw new InvalidFlyableTypeException();
 
     }
 

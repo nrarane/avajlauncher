@@ -2,6 +2,7 @@ package za.co.wethinkcode.avaj.simulator;
 
 import za.co.wethinkcode.avaj.simulator.vehicle.AircraftFactory;
 import za.co.wethinkcode.avaj.simulator.vehicle.Flyable;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

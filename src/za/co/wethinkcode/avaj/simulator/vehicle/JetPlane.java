@@ -2,11 +2,11 @@ package za.co.wethinkcode.avaj.simulator.vehicle;
 
 import za.co.wethinkcode.avaj.simulator.WeatherTower;
 
-public class Jetplane extends Aircraft implements Flyable {
+public class JetPlane extends Aircraft implements Flyable {
 
     private WeatherTower weatherTower;
 
-    Jetplane(String name, Coordinates coordinates) {
+    JetPlane(String name, Coordinates coordinates) {
         super(name, coordinates);
     }
 
@@ -14,12 +14,12 @@ public class Jetplane extends Aircraft implements Flyable {
 
 
         /*
-         ◦ SUN - Latitude increases with 10, Height increases with 2
-         ◦ RAIN - Latitude increases with 5
-         ◦ FOG - Latitude increases with 1
-         ◦ SNOW - Height decreases with 7
+         * SUN - Latitude increases with 10, Height increases with 2
+         * RAIN - Latitude increases with 5
+         * FOG - Latitude increases with 1
+         * SNOW - Height decreases with 7
          * */
-        String message = "Jetplane#"+name+"("+id+"):";
+        String message = "JetPlane#"+name+"("+id+"):";
         String weatherMessage = "";
 
         String weather = weatherTower.getWeather(coordinates);
