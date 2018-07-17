@@ -8,12 +8,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class Simulator {
 
     public static WeatherTower weatherTower;
     public static List<Flyable> flyables = new ArrayList<>();
+    Writer writer = new Writer();
 
     public static void main(String[] args) throws InterruptedException {
         try {
@@ -53,7 +53,7 @@ public class Simulator {
             System.out.println(e.getMessage());
         }
         finally {
-//            Logger.getLogger().close();
+            writer.close();
             System.out.println("done... ");
         }
     }
