@@ -13,14 +13,15 @@ public class Simulator {
 
     public static WeatherTower weatherTower;
     public static List<Flyable> flyables = new ArrayList<>();
-    Writer writer = new Writer();
+    static Writer writer = new Writer();
 
     public static void main(String[] args) throws InterruptedException {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(args[0]));
             String line = reader.readLine();
             if (line != null) {
-
+//                System.out.println("Did we even get here?");
+                int lines = 0;
                 weatherTower = new WeatherTower();
                 int simulations = Integer.parseInt(line.split(" ")[0]);
                 if (simulations < 0) {
@@ -28,10 +29,18 @@ public class Simulator {
                     System.exit(1);
                 }
                 while ((line = reader.readLine()) != null) {
-                    Flyable flyable = AircraftFactory.newAircraft(line.split(" ")[0], line.split(" ")[1],
-                            Integer.parseInt(line.split(" ")[2]), Integer.parseInt(line.split(" ")[3]),
-                            Integer.parseInt(line.split(" ")[4]));
-                    flyables.add(flyable);
+                    System.out.println("Did we even get here?");
+                    lines++;
+                    try {
+                        Flyable flyable = AircraftFactory.newAircraft(line.split(" ")[0], line.split(" ")[1],
+                                Integer.parseInt(line.split(" ")[2]), Integer.parseInt(line.split(" ")[3]),
+                                Integer.parseInt(line.split(" ")[4]));
+                        flyables.add(flyable);
+                    } catch (Exception e) {
+                        System.out.println("Could not register " + line.split(" ")[0] +
+                                "#" + line.split(" ")[1] + ", Error on line " + lines);
+                    }
+
                 }
 
                 for (Flyable flyable : flyables) {
@@ -39,7 +48,15 @@ public class Simulator {
                 }
 
                 for (int i = 0; i < simulations; i++) {
+
+                    writer.writeln("-------------");
+                    int j = i + 1;
+                    writer.writeln("simulation " + j);
+                    writer.writeln("-------------");
                     weatherTower.changeWeather();
+                    System.out.println();
+                    writer.writeln("");
+
                 }
             }
 

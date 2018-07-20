@@ -22,12 +22,14 @@ public class Tower {
         observers.add(flyable);
         Aircraft aircraft = (Aircraft)flyable;
         System.out.println("Weather tower says: " + aircraft.getName() + " registered to weather tower.");
+        Writer.writeln("Weather tower says: " + aircraft.getName() + " registered to weather tower.");
     }
 
     public void unregister(Flyable flyable) {
         observers.remove(flyable);
         Aircraft aircraft = (Aircraft)flyable;
         System.out.println("Weather tower says: " + aircraft.getName() + " unregistered from weather tower.");
+        Writer.writeln("Weather tower says: " + aircraft.getName() + " unregistered from weather tower.");
     }
 
     protected void conditionsChanged() {
@@ -45,6 +47,7 @@ public class Tower {
         if (observers.size() == 0)
         {
             System.out.println("Every aircraft has landed");
+            Writer.writeln("Every aircraft has landed");
             System.exit(0);
         }
     }

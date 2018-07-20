@@ -1,6 +1,7 @@
 package za.co.wethinkcode.avaj.simulator.vehicle;
 
 import za.co.wethinkcode.avaj.simulator.WeatherTower;
+import za.co.wethinkcode.avaj.simulator.Writer;
 
 public class JetPlane extends Aircraft implements Flyable {
 
@@ -48,6 +49,8 @@ public class JetPlane extends Aircraft implements Flyable {
             weatherMessage = " landing";
         }
         System.out.println(message + weatherMessage);
+        Writer.writeln(message + weatherMessage);
+
     }
 
     public void registerTower(WeatherTower weatherTower) {
